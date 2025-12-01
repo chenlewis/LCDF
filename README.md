@@ -11,12 +11,12 @@ pip install -r requirements.txt
 
 ## Train
 ```bash
-CUDA_VISIBLE_DEVICES=0,3 python -m torch.distributed.run --master_port 29501 --nproc_per_node=2 train.py --config configs/train/clas/train_bac2.yaml
+CUDA_VISIBLE_DEVICES=0,3 python -m torch.distributed.run --master_port 29501 --nproc_per_node=2 train.py --config [CONFIG_PATH]
 ```
 
 ## Test
 ```bash
-python test.py --config [CONFIG_PATH] --model [MODEL_PATH] --prompt [PROMPT_PATH]
+python test.py --config [CONFIG_PATH]
 ```
 
 ## Models and Results
